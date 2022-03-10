@@ -1,8 +1,6 @@
 <template>
     <main>
-        <div class="container">
-            <cardList />
-        </div>
+        <cardList />
     </main>
 </template>
 
