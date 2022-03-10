@@ -51,9 +51,11 @@ export default {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 40px;
+        padding: 80px 0;
     }
 
     .player-wrapper{
-        width: calc(100% / 5);
+        width: calc((100% - 160px) / 5);
     }
 </style>
