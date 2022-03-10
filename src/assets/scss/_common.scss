@@ -1,3 +1,19 @@
 //qui includo tutte le parti comune che si ripetono spesso nella pagina, compreso il font
 @import "~@fontsource/cooper-hewitt/index.css";
 @import "@fontsource/cooper-hewitt/700.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1170px;
+}
