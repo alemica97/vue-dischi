@@ -35,20 +35,31 @@ export default {
 
     .player-card{
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.151);
+        background-color: rgba(255, 255, 255, 0.11);
         text-align: center;
         height: 360px;
+        border-radius: 10px;
+        box-shadow: inset 0px 1px 4px 0px rgb(255 255 255 / 29%);
+
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.288);
+            transform: translateY(-5%);
+            transition: all 500ms;
+            cursor: pointer;
+        }
     }
 
     .card-image{
         width: 100%;
         margin-bottom: 15px;
-        
+        border-radius: 10px;
+        overflow: hidden;
 
         & img{
             aspect-ratio: 1/1;
             object-fit: cover;
             object-position: center;
+            display: block;
         }
     }
 
@@ -56,7 +67,7 @@ export default {
         font-size: 20px;
         color: white;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 700;
     }
 
     .card-info{
