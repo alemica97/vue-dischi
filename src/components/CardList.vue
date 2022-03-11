@@ -44,7 +44,9 @@ export default {
         // questa funzione ritorna un array con le card che hanno il genere selezionato 
         playerCardsGenreFiltered: function(){
             return this.playerCards.filter((el) => {
-                if(el.genre.includes(this.genreProps)){
+                if(el.genre.includes(this.genreProps)){ //uso includes altrimenti se non seleziono un genere, non mostra nessuna card
+                    console.log(el.genre);
+                    console.log(this.genreProps);
                     return true;
                 }else{
                     return false;
