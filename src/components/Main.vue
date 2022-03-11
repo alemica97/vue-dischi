@@ -1,7 +1,8 @@
 <template>
     <main>
-        <selectGenre @selectegenre="" />
-        <cardList />
+        <!-- ascolto l'evento scatenato dall' $emit nel componente (SelectGenre) -->
+        <selectGenre @selectedgenre="getSelectedGenre" />
+        <cardList :genreProps="genreSelected" />
     </main>
 </template>
 
@@ -19,12 +20,19 @@ export default {
 
     data(){
         return{
-            // genreSelected: '',
+            // questo rimarra un valore non definito finche il valore della select non cambia scatenando un evento 
+            genreSelected: '',
         }
     },
-    // computed: {
-
-    // }
+    methods: {
+        // questo metodo da il valore del parametro portato dalla $emit al data() genreSelected 
+        getSelectedGenre: function( genre ){
+            // console.log(genre);
+            // console.log(this.genreSelected);
+            this.genreSelected = genre;
+            // console.log(this.genreSelected);
+        }
+    },
 }
 </script>
 

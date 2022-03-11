@@ -5,8 +5,10 @@
         @change="$emit('selectedgenre', parametro)" 
         name="genre" id="genre">
             <option value="">Scegli il tuo genere preferito</option>
-            <option value="rock">Rock</option>
-            <option value="jazz">Jazz</option>
+            <option value="Rock">Rock</option>
+            <option value="Pop">Pop</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Metal">Metal</option>
         </select>
         <!-- <h1>{{ parametro }}</h1> -->
     </div>

@@ -6,7 +6,7 @@
         <div v-else class="container">
             <myCard 
             class="player-wrapper"
-            v-for="(playerEl, i) in playerCards" 
+            v-for="(playerEl, i) in playerCardsGenreFiltered" 
             :key="i" 
             :player="playerEl"/> <!--  il v-bind della props (player) = "l'elemento dell'array ciclato" -->
         </div>
@@ -25,11 +25,31 @@ export default {
         myCard,
         listLoader,
     },
+    //a questa props passo il valore del data() genreSelected che si trova nel main
+    props: {
+        genreProps: {
+            type: String,
+            default: '',
+        }
+    },
 
     data(){
         return{
             // success: true,
             playerCards: [],
+        }
+    },
+
+    computed: {
+        // questa funzione ritorna un array con le card che hanno il genere selezionato 
+        playerCardsGenreFiltered: function(){
+            return this.playerCards.filter((el) => {
+                if(el.genre.includes(this.genreProps)){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
         }
     },
 
@@ -40,7 +60,7 @@ export default {
                 // this.success = res.data.success;
                 this.playerCards = res.data.response;
                 console.log(this.playerCards);
-            })
+            });
         }
     },
 
