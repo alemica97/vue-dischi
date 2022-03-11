@@ -76,6 +76,7 @@ export default {
         gap: 5px;
         color: rgba(255, 255, 255, 0.5);
         font-size: 15px;
+        font-weight: 400;
         margin-top: 15px;
     }
 </style>

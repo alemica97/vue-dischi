@@ -1,7 +1,10 @@
 //qui includo tutte le parti comune che si ripetono spesso nella pagina, compreso il font
 @import "~@fontsource/cooper-hewitt/index.css";
+@import "@fontsource/cooper-hewitt/400.css";
+@import "@fontsource/cooper-hewitt/500.css";
 @import "@fontsource/cooper-hewitt/700.css";
 @import "@fontsource/cooper-hewitt/800.css";
+  
 
 *{
     margin: 0;
@@ -17,3 +20,4 @@ img{
     margin: 0 auto;
     width: 1170px;
 }
+

@@ -1,16 +1,16 @@
 <template>
-    <main>
+    <div class="main-content">
         <div v-if="playerCards.length < 10" class="loader">
             <list-loader />
         </div>
         <div v-else class="container">
             <myCard 
             class="player-wrapper"
-            v-for="(player, i) in playerCards" 
+            v-for="(playerEl, i) in playerCards" 
             :key="i" 
-            :player="player"/>
+            :player="playerEl"/> <!--  il v-bind della props (player) = "l'elemento dell'array ciclato" -->
         </div>
-    </main>
+    </div>
 </template>
 
 <script>
